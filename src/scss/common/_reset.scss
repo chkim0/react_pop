@@ -1,0 +1,29 @@
+@charset 'UTF-8';
+* {
+	margin: 0px;
+	padding: 0px;
+	box-sizing: border-box;
+}
+ul,
+ol,
+li {
+	list-style: none;
+}
+a {
+	text-decoration: none;
+}
+
+body{
+	background: #efefef;
+}
+table,th,td{
+	border-collapse: collapse;
+}
+fieldset{
+	border: none;
+}
+.h{
+	position: absolute;
+	top: -9999999px;
+	opacity: 0;
+}
