@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Work+Sans:wght@100&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Bangers&family=Bowlby+One+SC&family=Grape+Nuts&family=Herr+Von+Muellerhoff&family=Notable&display=swap");
 * {
   margin: 0px;
   padding: 0px;
@@ -19,7 +19,9 @@ body {
   background: #efefef;
 }
 
-table, th, td {
+table,
+th,
+td {
   border-collapse: collapse;
 }
 
@@ -29,7 +31,7 @@ fieldset {
 
 .h {
   position: absolute;
-  top: -9999999px;
+  top: -99999px;
   opacity: 0;
 }
 
@@ -59,7 +61,7 @@ footer .inner p {
 .content figure {
   width: 100%;
   height: 300px;
-  background: #bbb;
+  background: #eee;
   opacity: 0;
   transition: 1s;
 }
@@ -74,15 +76,15 @@ footer .inner p {
 }
 .content > .inner h1 {
   font: normal 60px/1 "work sans";
-  color: #111;
-  margin-bottom: 70px;
+  color: #fff;
+  margin-bottom: 50px;
 }
 .content > .inner h1::after {
   content: "";
   display: block;
-  width: 60px;
-  height: 1px;
-  background: #555;
+  width: 350px;
+  height: 2px;
+  background: #fff;
   margin-top: 20px;
 }
 .content.on figure {
@@ -105,7 +107,8 @@ footer .inner p {
 }
 header {
   width: 100%;
-  background: #222;
+  background: #000;
+  margin-top: 10px;
 }
 header .inner {
   width: 1180px;
@@ -115,12 +118,14 @@ header .inner {
 }
 header .inner h1 {
   position: absolute;
-  bottom: 20px;
-  left: 0px;
+  bottom: 23px;
+  left: 70px;
+  display: inline-block;
 }
 header .inner h1 a {
-  font: bold 24px/1 "arial";
+  font: normal 25px/1 "Notable";
   color: #fff;
+  text-align: center;
 }
 header .inner #gnb {
   position: absolute;
@@ -132,9 +137,9 @@ header .inner #gnb li {
 }
 header .inner #gnb li a {
   display: inline-block;
-  padding: 20px 30px;
-  font: bold 14px/1 "arial";
-  color: #fff;
+  padding: 20px 15px;
+  font: bold 15px/1 "Notable";
+  color: #000;
 }
 header .inner .fa-bars {
   font-size: 24px;
@@ -144,6 +149,7 @@ header .inner .fa-bars {
   display: none;
 }
 header.sub {
+  border-bottom: 1px solid #999;
   background: #fff;
 }
 header.sub .inner h1 a {
@@ -156,17 +162,21 @@ header.sub .inner .fa-bars {
   color: #333;
 }
 header.main {
-  background: #fff;
+  background: transparent;
   border-bottom: 1px solid #ccc;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 2;
 }
 header.main .inner h1 a {
-  color: #555;
+  color: #fff;
 }
 header.main .inner #gnb li a {
-  color: #555;
+  color: #fff;
 }
 header.main .inner .fa-bars {
-  color: #ddd;
+  color: #fff;
 }
 
 @media screen and (max-width: 1179px) {
@@ -207,6 +217,11 @@ header.main .inner .fa-bars {
   height: 100%;
   object-fit: cover;
 }
+.pop .con img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
 .pop .close {
   font: bold 14px/1 "arial";
   color: orange;
@@ -216,26 +231,271 @@ header.main .inner .fa-bars {
   cursor: pointer;
 }
 
-main {
+#news {
+  width: 100%;
+  height: 100vh;
+  background: #c6ffc6;
+  position: relative;
+  padding: 10vh;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+#news h1 {
+  display: block;
+  width: 100%;
+  text-align: center;
+  margin-bottom: 20px;
+}
+#news article {
+  width: 15%;
+  min-height: 180px;
+  border: 1px solid #999;
+  padding: 20px;
+  margin: 10px;
+  transform: translateY(100px) rotateY(180deg);
+  opacity: 0;
+  transition-duration: 0.5s;
+}
+#news article h2 {
+  font: bold 18px/1 "arial";
+  color: #444;
+  margin-bottom: 15px;
+}
+#news article p {
+  font: 14px/1.2 "arial";
+  color: #777;
+}
+#news.on article {
+  transform: translateY(0) rotateY(0deg);
+  opacity: 1;
+}
+#news.on article:nth-of-type(0) {
+  transition-delay: 0s;
+}
+#news.on article:nth-of-type(1) {
+  transition-delay: 0.2s;
+}
+#news.on article:nth-of-type(2) {
+  transition-delay: 0.4s;
+}
+#news.on article:nth-of-type(3) {
+  transition-delay: 0.6s;
+}
+#news.on article:nth-of-type(4) {
+  transition-delay: 0.8s;
+}
+#news.on article:nth-of-type(5) {
+  transition-delay: 1s;
+}
+
+#visual {
+  width: 100%;
+  height: 90vh;
+  background: #333;
+  position: relative;
+}
+#visual .inner {
   width: 1180px;
-  min-height: 500px;
-  margin: 150px auto;
+  position: relative;
+}
+#visual .inner video {
+  position: absolute;
+  top: 90px;
+  left: 500px;
+  width: 100%;
+  height: 70vh;
+  opacity: 1;
+  z-index: 10;
+  margin: 0 auto;
+}
+#visual .inner h1 {
+  position: absolute;
+  top: 260px;
+  left: 450px;
+  font: bold 45px/1 "Grape Nuts", cursive;
+  color: #fff;
+  z-index: 4;
+}
+#visual .inner h1::after {
+  content: "";
+  display: block;
+  width: 450px;
+  height: 2px;
+  background: burlywood;
+  margin-top: 10px;
+  z-index: 15;
+}
+#visual .inner a {
+  position: absolute;
+  top: 400px;
+  left: 530px;
+  font: bold 20px/1 "arial";
+  color: #fff;
+  border-radius: 5px;
+  border: 1px solid burlywood;
+  background-color: burlywood;
+  z-index: 4;
+}
+#visual .inner a .bbox {
+  position: absolute;
+  width: 1180px;
+  height: 200px;
+  background: #000;
+  z-index: 3;
+  top: 644px;
+  left: 157px;
+}
+
+#vids {
+  width: 100%;
+  height: 100vh;
+  background: #eeffc6;
+  position: relative;
+  padding: 10vw;
+}
+
+#pics {
+  width: 100%;
+  height: 100vh;
+  background: #c6fcff;
+  position: relative;
+  padding: 10vw;
+  overflow: hidden;
+}
+#pics p {
+  font: bold 200px/1 "arial";
+  color: rgba(0, 0, 0, 0.3);
+  position: absolute;
+  top: 100px;
+  left: 100px;
+}
+#pics h3 {
+  font: bold 160px/1 "arial";
+  color: #fff;
+  position: absolute;
+  top: 160px;
+  left: 100px;
+  text-shadow: 20px 20px 50px rgba(0, 0, 0, 0.4);
+}
+
+.scroll_navi {
+  position: fixed;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 50px;
+  z-index: 3;
+}
+.scroll_navi li {
+  width: 10px;
+  height: 10px;
+  border: 1px solid #111;
+  background: #fff;
+  margin: 20px;
+  cursor: pointer;
+  transition: 0.5s;
+}
+.scroll_navi li.on {
+  height: 100px;
+  background: #111;
+  border: #fff;
+}
+
+.Community > .inner {
+  width: 100%;
+  border: 1px solid #bbb;
+  padding: 50px;
+  margin-bottom: 50px;
+}
+.Community > .inner input[type=text], .Community > .inner textarea {
+  width: 50%;
+  padding: 8px 10px;
+  border: 1px solid #aaa;
+  margin-bottom: 20px;
+  resize: none;
+}
+.Community > .inner .btnSet button {
+  width: 150px;
+  height: 30px;
+  display: inline-block;
+  border: none;
+  background: #555;
+  color: #fff;
+  cursor: pointer;
+  margin-right: 20px;
+  margin-bottom: 20px;
+}
+.Community .showBox {
+  width: 100%;
+  border: 1px solid #bbb;
+  padding: 50px;
+}
+.Community .showBox article {
+  background: #fff;
+  padding: 30px;
+  margin-bottom: 40px;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  align-content: center;
+}
+.Community .showBox article .editTxt {
+  width: 60%;
+}
+.Community .showBox article .editTxt input[type=text],
+.Community .showBox article .editTxt textarea {
+  width: 100%;
+  padding: 8px 10px;
+  border: 1px solid lightblue;
+  margin-bottom: 20px;
+  background: #eaf9f9;
+}
+.Community .showBox article .btnSet {
+  display: flex;
+  align-items: center;
+}
+.Community .showBox article .btnSet button {
+  background: transparent;
+  margin: 10px;
+  cursor: pointer;
+  border: none;
+}
+.Community .showBox article .btnSet button:nth-of-type(1) {
+  color: orange;
+}
+.Community .showBox article .btnSet button:nth-of-type(2) {
+  color: slateblue;
 }
 
 @media screen and (max-width: 1179px) {
-  main {
+  .Community > .inner .inputBox input[type=text],
+.Community > .inner .inputBox tetarea {
     width: 100%;
-    padding: 0px 40px;
+  }
+  .Community > .inner .inputBox .btnSet {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  .Community > .inner .inputBox .btnSet button {
+    width: 47%;
+    margin-right: 0px;
+  }
+  .Community > .inner .showBox article .editTxt, .Community > .inner .showBox article .txt {
+    width: 100%;
+  }
+  .Community > .inner .showBox article .btnSet {
+    margin-top: 20px;
+  }
+  .Community > .inner .showBox article .btnSet button {
+    margin-left: 0px;
   }
 }
-#visual {
-  width: 100%;
-  height: 100vh;
-  background: #555;
-  position: relative;
-  z-index: 1;
+.Department {
+  background: #222;
+  margin-bottom: 20px;
 }
-
 .Department > .inner::after {
   content: "";
   display: block;
@@ -245,26 +505,48 @@ main {
   width: 33.333%;
   float: left;
   padding: 10px;
-  margin-bottom: 50px;
-}
-.Department > .inner article .inner {
-  width: 100%;
-}
-.Department > .inner article .inner .pic {
-  width: 100%;
-  height: 300px;
-  background: #111;
   margin-bottom: 20px;
-  filter: saturate(0.2);
+}
+.Department > .inner article .pic {
+  width: 100%;
+  height: 400px;
+  background: #111;
+  border: 7px solid #fff;
+  filter: saturate(0.3);
+  transition: 0.5s;
+  transform: translateY(100px);
+}
+.Department > .inner article .pic:hover .info {
+  opacity: 1;
   transition: 0.5s;
 }
-.Department > .inner article .inner .pic:hover {
+.Department > .inner article .pic:hover {
   filter: saturate(1.1);
+  transform: translateY(0);
+  opacity: 1;
 }
-.Department > .inner article .inner .pic img {
+.Department > .inner article .pic img {
   width: 100%;
   height: 100%;
   object-fit: cover;
+}
+.Department > .inner article .info {
+  width: 373px;
+  height: 130px;
+  background-color: #ddd;
+  opacity: 1;
+  padding: 10px;
+  margin-right: 10px;
+}
+.Department > .inner article .info h3 {
+  font: bold 25px/1 "Bangers";
+  color: #111;
+  text-align: center;
+}
+.Department > .inner article .info p {
+  font: bold 15px/1 "arial";
+  color: #111;
+  text-align: center;
 }
 
 @media screen and (max-width: 1179px) {
@@ -283,6 +565,122 @@ main {
   }
   .Department > .inner article .inner .pic {
     height: 200px;
+  }
+}
+.Gallery {
+  background: #222;
+}
+.Gallery .loading {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 0;
+}
+.Gallery .controls {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.Gallery .controls nav {
+  padding: 10px;
+  display: flex;
+  gap: 20px;
+}
+.Gallery .controls nav button {
+  border: none;
+  width: 130px;
+  height: 30px;
+  background: #555;
+  font: 12px/30px "arial";
+  text-align: center;
+  color: #fff;
+  cursor: pointer;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+}
+.Gallery .controls .searchBox {
+  padding-right: 15px;
+}
+.Gallery .controls .searchBox .input {
+  width: 200px;
+  height: 26px;
+  background: #fff;
+  border: 1px solid #bbb;
+  padding: 3px 8px;
+}
+.Gallery .controls .searchBox button {
+  width: 80px;
+  height: 26px;
+  border: none;
+  background: #555;
+  font: 12px/26px "arial";
+  color: #fff;
+  cursor: pointer;
+}
+.Gallery .frame {
+  transform: translateY(200px);
+  opacity: 0;
+  transition: all 0.5s;
+}
+.Gallery .frame.on {
+  transform: translateY(0px);
+  opacity: 1;
+}
+.Gallery .frame::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+.Gallery .frame article {
+  width: 25%;
+  padding: 10px;
+  float: left;
+}
+.Gallery .frame article .inner {
+  width: 100%;
+  padding: 10px;
+  background: #fff;
+  box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.03);
+}
+.Gallery .frame article .inner .pic {
+  width: 100%;
+  margin-bottom: 5px;
+}
+.Gallery .frame article .inner .pic img {
+  width: 100%;
+}
+.Gallery .frame article .inner h2 {
+  font: normal 14px/1.2 "arial";
+  color: #777;
+  margin-bottom: 30px;
+}
+.Gallery .frame article .inner .profile {
+  display: flex;
+  align-items: center;
+}
+.Gallery .frame article .inner .profile img {
+  width: 40px;
+  border-radius: 50%;
+  margin-bottom: 10px;
+}
+.Gallery .frame article .inner .profile span {
+  color: orange;
+  cursor: pointer;
+  transition: 0.5s;
+  font-size: 20px;
+}
+.Gallery .frame article .inner .profile span:hover {
+  color: aqua;
+}
+
+@media screen and (max-width: 1179px) {
+  section .frame article {
+    width: 33.3333%;
+  }
+}
+@media screen and (max-width: 539px) {
+  section .frame article {
+    width: 100%;
   }
 }
 .Location figure {
@@ -362,8 +760,11 @@ main {
   padding: 15px 30px;
 }
 .Member > .inner table td input[type=text],
-.Member > .inner table td input[type=password],
-.Member > .inner table td select,
+.Member > .inner table td input[type=password] {
+  width: 40%;
+  border: 1px solid #aaa;
+  padding: 6px 10px;
+}
 .Member > .inner table td textarea {
   width: 40%;
   border: 1px solid #aaa;
@@ -373,8 +774,7 @@ main {
 .Member > .inner table td label {
   margin-right: 6px;
 }
-.Member > .inner table td input[type=radio],
-.Member > .inner table td input[type=checkbox] {
+.Member > .inner table td input[type=radio] {
   margin-right: 20px;
 }
 .Member > .inner table td .err {
@@ -383,43 +783,6 @@ main {
   margin-left: 10px;
 }
 
-@media screen and (max-width: 1179px) {
-  .Member > .inner table td input[type=text],
-.Member > .inner table td input[type=password],
-.Member > .inner table td select,
-.Member > .inner table td textarea {
-    width: 80%;
-  }
-  .Member > .inner table td .err {
-    display: block;
-    margin-top: 10px;
-  }
-}
-@media screen and (max-width: 539px) {
-  .Member > .inner table th {
-    display: none;
-    padding: 15px 0px;
-  }
-  .Member > .inner table th:last-child {
-    display: block;
-    width: 100%;
-  }
-  .Member > .inner table th input[type=reset],
-.Member > .inner table th input[type=submit] {
-    width: 48%;
-    margin: 0;
-  }
-  .Member > .inner table td {
-    border-left: none;
-    padding: 15px 0px;
-  }
-  .Member > .inner table td input[type=text],
-.Member > .inner table td input[type=password],
-.Member > .inner table td select,
-.Member > .inner table td textarea {
-    width: 100%;
-  }
-}
 .Youtube article {
   border-top: 1px solid #aaa;
   padding: 20px 0px;
@@ -453,7 +816,7 @@ main {
   width: 40%;
   height: 200px;
   background: #000;
-  filter: saturate(0.3);
+  filter: saturate(0);
   transition: 0.5s;
 }
 .Youtube article .pic img {
@@ -467,6 +830,19 @@ main {
 
 @media screen and (max-width: 1179px) {
   .Youtube article h3 {
+    width: 48%;
+  }
+  .Youtube article .txt {
+    width: 50%;
+  }
+  .Youtube article .pic {
+    width: 100%;
+    margin-top: 50px;
+    margin-bottom: 80px;
+  }
+}
+@media screen and (max-width: 539px) {
+  .Youtube article h3 {
     width: 100%;
     margin-bottom: 20px;
   }
@@ -474,7 +850,7 @@ main {
     width: 100%;
   }
   .Youtube article .pic {
-    height: 150px;
+    height: 120px;
     margin-bottom: 0px;
   }
 }

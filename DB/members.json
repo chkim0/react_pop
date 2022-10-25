@@ -1,0 +1,40 @@
+{
+    "members": [
+        {
+            "name": "Julia",
+            "position": "President",
+            "pic": "member1.jpg",
+            "email": "kpes2002@naver.com"
+        },
+        {
+            "name": "David",
+            "position": "Vice President",
+            "pic": "member2.jpg",
+            "email": "qkqhek2@paran.com"
+        },
+        {
+            "name": "Emily",
+            "position": "UI Designer",
+            "pic": "member3.jpg",
+            "email": "dlcksdyd2@daum.com"
+        },
+        {
+            "name": "Paul",
+            "position": "Front-end Engineer",
+            "pic": "member4.jpg",
+            "email": "bbbirn2@nate.com"
+        },
+        {
+            "name": "sara",
+            "position": "Back-end Engineer",
+            "pic": "member5.jpg",
+            "email": "sarada2@gmail.com"
+        },
+        {
+            "name": "Michael",
+            "position": "Project Manager",
+            "pic": "member6.jpg",
+            "email": "Micellen@yahoo.com"
+        }
+    ]
+}

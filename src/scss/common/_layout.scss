@@ -2,7 +2,7 @@
 	figure {
 		width: 100%;
 		height: 300px;
-		background: #bbb;
+		background: #eee;
 		opacity: 0;
 		transition: 1s;
 	}
@@ -16,15 +16,15 @@
 		//transition: opacity 0.5s, transform 1s;
 		transition: 0.5s;
 		h1 {
-			font: normal 60px/1 'work sans';
-			color: #111;
-			margin-bottom: 70px;
+			font: normal 60px/1 "work sans";
+			color: #fff;
+			margin-bottom: 50px;
 			&::after {
-				content: '';
+				content: "";
 				display: block;
-				width: 60px;
-				height: 1px;
-				background: #555;
+				width: 350px;
+				height: 2px;
+				background: #fff;
 				margin-top: 20px;
 			}
 		}

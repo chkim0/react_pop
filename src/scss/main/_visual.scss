@@ -1,7 +1,58 @@
 #visual {
 	width: 100%;
-	height: 100vh;
-	background: #555;
+	height: 90vh;
+	background: #333;
 	position: relative;
-	z-index: 1;
+	.inner {
+		width: 1180px;
+		position: relative;
+		video {
+			position: absolute;
+			top: 90px;
+			left: 500px;
+			width: 100%;
+			height: 70vh;
+			opacity: 1;
+			z-index: 10;
+			margin: 0 auto;
+		}
+		h1 {
+			position: absolute;
+			top: 260px;
+			left: 450px;
+			font: bold 45px/1 "Grape Nuts", cursive;
+			color: #fff;
+			z-index: 4;
+			&::after {
+				content: "";
+				display: block;
+				width: 450px;
+				height: 2px;
+				background: burlywood;
+				margin-top: 10px;
+				z-index: 15;
+			}
+		}
+		a {
+			position: absolute;
+			top: 400px;
+			left: 530px;
+			font: bold 20px/1 "arial";
+			color: #fff;
+			border-radius: 5px;
+			border: 1px solid burlywood;
+			background-color: burlywood;
+			z-index: 4;
+
+			.bbox {
+				position: absolute;
+				width: 1180px;
+				height: 200px;
+				background: #000;
+				z-index: 3;
+				top: 644px;
+				left: 157px;
+			}
+		}
+	}
 }

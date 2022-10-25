@@ -1,6 +1,7 @@
 header {
 	width: 100%;
-	background: #222;
+	background: #000;
+	margin-top: 10px;
 	.inner {
 		width: 1180px;
 		height: 80px;
@@ -9,11 +10,14 @@ header {
 
 		h1 {
 			position: absolute;
-			bottom: 20px;
-			left: 0px;
+			bottom: 23px;
+			left: 70px;
+			display: inline-block;
+
 			a {
-				font: bold 24px/1 'arial';
+				font: normal 25px/1 "Notable";
 				color: #fff;
+				text-align: center;
 			}
 		}
 		#gnb {
@@ -24,9 +28,9 @@ header {
 				float: left;
 				a {
 					display: inline-block;
-					padding: 20px 30px;
-					font: bold 14px/1 'arial';
-					color: #fff;
+					padding: 20px 15px;
+					font: bold 15px/1 "Notable";
+					color: #000;
 				}
 			}
 		}
@@ -39,6 +43,7 @@ header {
 		}
 	}
 	&.sub {
+		border-bottom: 1px solid #999;
 		background: #fff;
 		.inner {
 			h1 a {
@@ -53,17 +58,21 @@ header {
 		}
 	}
 	&.main {
-		background: #fff;
+		background: transparent;
 		border-bottom: 1px solid #ccc;
+		position: absolute;
+		top: 0;
+		left: 0;
+		z-index: 2;
 		.inner {
 			h1 a {
-				color: #555;
+				color: #fff;
 			}
 			#gnb li a {
-				color: #555;
+				color: #fff;
 			}
 			.fa-bars {
-				color: #ddd;
+				color: #fff;
 			}
 		}
 	}

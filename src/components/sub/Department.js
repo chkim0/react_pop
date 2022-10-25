@@ -1,4 +1,3 @@
-//npm i axios
 import Layout from "../common/Layout";
 import axios from "axios";
 import { useEffect, useState } from "react";
@@ -12,8 +11,7 @@ export default function Department() {
         axios.get(`${path}/DB/members.json`).then((json) => {
             setMembers(json.data.members);
         })
-    },[]);
-
+    }, []);
 
     return (
         <Layout name={'Department'}>
@@ -24,8 +22,11 @@ export default function Department() {
                             <div className="pic">
                                 <img src={`${path}/img/${data.pic}`} alt={data.name} />
                             </div>
-                            <h3>{data.name}</h3>
-                            <p>{data.position}</p>
+                            <div className="info">
+                                <h3>{data.name}</h3>
+                                <p>{data.position}</p>
+                                <p>{data.email}</p>
+                            </div>
                         </div>
                     </article>
                 );

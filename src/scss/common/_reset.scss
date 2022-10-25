@@ -13,17 +13,19 @@ a {
 	text-decoration: none;
 }
 
-body{
+body {
 	background: #efefef;
 }
-table,th,td{
+table,
+th,
+td {
 	border-collapse: collapse;
 }
-fieldset{
+fieldset {
 	border: none;
 }
-.h{
+.h {
 	position: absolute;
-	top: -9999999px;
+	top: -99999px;
 	opacity: 0;
 }
