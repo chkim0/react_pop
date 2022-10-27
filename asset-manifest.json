@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.css": "/react_pop/static/css/main.441f7a89.css",
-    "main.js": "/react_pop/static/js/main.cf10b0b3.js",
-    "index.html": "/react_pop/index.html",
-    "main.441f7a89.css.map": "/react_pop/static/css/main.441f7a89.css.map",
-    "main.cf10b0b3.js.map": "/react_pop/static/js/main.cf10b0b3.js.map"
+    "main.css": "/%20//chkim0.github.io/react_po/static/css/main.b0d76a2f.css",
+    "main.js": "/%20//chkim0.github.io/react_po/static/js/main.a421edfa.js",
+    "index.html": "/%20//chkim0.github.io/react_po/index.html",
+    "main.b0d76a2f.css.map": "/%20//chkim0.github.io/react_po/static/css/main.b0d76a2f.css.map",
+    "main.a421edfa.js.map": "/%20//chkim0.github.io/react_po/static/js/main.a421edfa.js.map"
   },
   "entrypoints": [
-    "static/css/main.441f7a89.css",
-    "static/js/main.cf10b0b3.js"
+    "static/css/main.b0d76a2f.css",
+    "static/js/main.a421edfa.js"
   ]
 }
