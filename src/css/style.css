@@ -61,7 +61,7 @@ footer .inner p {
 .content figure {
   width: 100%;
   height: 300px;
-  background: #eee;
+  background: #bbb;
   opacity: 0;
   transition: 1s;
 }
@@ -82,7 +82,7 @@ footer .inner p {
 .content > .inner h1::after {
   content: "";
   display: block;
-  width: 350px;
+  width: 60px;
   height: 2px;
   background: #fff;
   margin-top: 20px;
@@ -123,7 +123,7 @@ header .inner h1 {
   display: inline-block;
 }
 header .inner h1 a {
-  font: normal 25px/1 "Notable";
+  font: normal 25px/1 "arial";
   color: #fff;
   text-align: center;
 }
@@ -138,7 +138,7 @@ header .inner #gnb li {
 header .inner #gnb li a {
   display: inline-block;
   padding: 20px 15px;
-  font: bold 15px/1 "Notable";
+  font: bold 15px/1 "arial";
   color: #000;
 }
 header .inner .fa-bars {
@@ -217,11 +217,6 @@ header.main .inner .fa-bars {
   height: 100%;
   object-fit: cover;
 }
-.pop .con img {
-  width: 100%;
-  height: 100%;
-  object-fit: contain;
-}
 .pop .close {
   font: bold 14px/1 "arial";
   color: orange;
@@ -294,31 +289,40 @@ header.main .inner .fa-bars {
   width: 100%;
   height: 90vh;
   background: #333;
-  position: relative;
 }
 #visual .inner {
   width: 1180px;
   position: relative;
+  padding: 10px auto;
 }
 #visual .inner video {
   position: absolute;
   top: 90px;
-  left: 500px;
-  width: 100%;
+  left: 666px;
+  width: 65%;
   height: 70vh;
   opacity: 1;
-  z-index: 10;
+  z-index: 5;
   margin: 0 auto;
+  object-fit: cover;
 }
-#visual .inner h1 {
+#visual .inner .since {
   position: absolute;
-  top: 260px;
-  left: 450px;
-  font: bold 45px/1 "Grape Nuts", cursive;
-  color: #fff;
-  z-index: 4;
+  font: bold 12px/1 "arial";
+  color: orange;
+  top: 145px;
+  left: 515px;
 }
-#visual .inner h1::after {
+#visual .inner > h1 {
+  position: absolute;
+  top: 158px;
+  left: 440px;
+  font: bold 70px/1 "Grape Nuts", cursive;
+  color: #fff;
+  z-index: 7;
+}
+#visual .inner > h1::after {
+  position: absolute;
   content: "";
   display: block;
   width: 450px;
@@ -326,26 +330,77 @@ header.main .inner .fa-bars {
   background: burlywood;
   margin-top: 10px;
   z-index: 15;
+  top: 98px;
+  left: 238px;
 }
 #visual .inner a {
-  position: absolute;
-  top: 400px;
-  left: 530px;
+  display: block;
+  text-align: center;
+  height: 40px;
+  width: 250px;
+  top: 385px;
+  left: 490px;
+  padding-top: 8px;
   font: bold 20px/1 "arial";
   color: #fff;
-  border-radius: 5px;
-  border: 1px solid burlywood;
+  transform: skewX(0deg);
+  position: absolute;
   background-color: burlywood;
+  z-index: 7;
+}
+#visual .inner a::after {
+  transform: skewX(315deg);
+}
+#visual .inner .scrd {
+  font: bold 12px/1 "arial";
+  color: orange;
+  position: absolute;
+  top: 650px;
+  left: 500px;
+  transform: rotate(270deg);
   z-index: 4;
 }
-#visual .inner a .bbox {
+#visual .inner .bbox {
   position: absolute;
   width: 1180px;
   height: 200px;
-  background: #000;
+  background: #111;
   z-index: 3;
-  top: 644px;
-  left: 157px;
+  top: 643px;
+  left: 252px;
+}
+#visual .inner .pic {
+  position: absolute;
+  top: 100px;
+  right: 100px;
+  z-index: 5;
+}
+#visual .inner .lorem {
+  width: 200px;
+  height: 200px;
+  background: #000;
+  position: absolute;
+  top: 643px;
+  right: -115px;
+  z-index: 8;
+  padding: 10px;
+}
+#visual .inner .lorem h1 {
+  font: 10px/1 "arial";
+  color: orange;
+  margin: 10px 20px;
+}
+#visual .inner .lorem > p {
+  font: 15px/1.3 "arial";
+  color: #fff;
+  margin: 10px 27px;
+}
+#visual .inner .lorem span {
+  font: 10px/1.2 "arial";
+  color: #999;
+  margin: 3px 15px;
+  display: block;
+  padding: 5px;
 }
 
 #vids {
@@ -511,6 +566,7 @@ header.main .inner .fa-bars {
   width: 100%;
   height: 400px;
   background: #111;
+  margin-bottom: 20px;
   border: 7px solid #fff;
   filter: saturate(0.3);
   transition: 0.5s;
@@ -539,7 +595,7 @@ header.main .inner .fa-bars {
   margin-right: 10px;
 }
 .Department > .inner article .info h3 {
-  font: bold 25px/1 "Bangers";
+  font: bold 25px/1 "arial";
   color: #111;
   text-align: center;
 }
@@ -565,122 +621,6 @@ header.main .inner .fa-bars {
   }
   .Department > .inner article .inner .pic {
     height: 200px;
-  }
-}
-.Gallery {
-  background: #222;
-}
-.Gallery .loading {
-  position: absolute;
-  top: 0;
-  left: 50%;
-  transform: translateX(-50%);
-  z-index: 0;
-}
-.Gallery .controls {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-.Gallery .controls nav {
-  padding: 10px;
-  display: flex;
-  gap: 20px;
-}
-.Gallery .controls nav button {
-  border: none;
-  width: 130px;
-  height: 30px;
-  background: #555;
-  font: 12px/30px "arial";
-  text-align: center;
-  color: #fff;
-  cursor: pointer;
-  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
-}
-.Gallery .controls .searchBox {
-  padding-right: 15px;
-}
-.Gallery .controls .searchBox .input {
-  width: 200px;
-  height: 26px;
-  background: #fff;
-  border: 1px solid #bbb;
-  padding: 3px 8px;
-}
-.Gallery .controls .searchBox button {
-  width: 80px;
-  height: 26px;
-  border: none;
-  background: #555;
-  font: 12px/26px "arial";
-  color: #fff;
-  cursor: pointer;
-}
-.Gallery .frame {
-  transform: translateY(200px);
-  opacity: 0;
-  transition: all 0.5s;
-}
-.Gallery .frame.on {
-  transform: translateY(0px);
-  opacity: 1;
-}
-.Gallery .frame::after {
-  content: "";
-  display: block;
-  clear: both;
-}
-.Gallery .frame article {
-  width: 25%;
-  padding: 10px;
-  float: left;
-}
-.Gallery .frame article .inner {
-  width: 100%;
-  padding: 10px;
-  background: #fff;
-  box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.03);
-}
-.Gallery .frame article .inner .pic {
-  width: 100%;
-  margin-bottom: 5px;
-}
-.Gallery .frame article .inner .pic img {
-  width: 100%;
-}
-.Gallery .frame article .inner h2 {
-  font: normal 14px/1.2 "arial";
-  color: #777;
-  margin-bottom: 30px;
-}
-.Gallery .frame article .inner .profile {
-  display: flex;
-  align-items: center;
-}
-.Gallery .frame article .inner .profile img {
-  width: 40px;
-  border-radius: 50%;
-  margin-bottom: 10px;
-}
-.Gallery .frame article .inner .profile span {
-  color: orange;
-  cursor: pointer;
-  transition: 0.5s;
-  font-size: 20px;
-}
-.Gallery .frame article .inner .profile span:hover {
-  color: aqua;
-}
-
-@media screen and (max-width: 1179px) {
-  section .frame article {
-    width: 33.3333%;
-  }
-}
-@media screen and (max-width: 539px) {
-  section .frame article {
-    width: 100%;
   }
 }
 .Location figure {

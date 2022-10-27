@@ -2,28 +2,38 @@
 	width: 100%;
 	height: 90vh;
 	background: #333;
-	position: relative;
+
 	.inner {
 		width: 1180px;
 		position: relative;
+		padding: 10px auto;
 		video {
 			position: absolute;
 			top: 90px;
-			left: 500px;
-			width: 100%;
+			left: 666px;
+			width: 65%;
 			height: 70vh;
 			opacity: 1;
-			z-index: 10;
+			z-index: 5;
 			margin: 0 auto;
+			object-fit: cover;
 		}
-		h1 {
+		.since {
 			position: absolute;
-			top: 260px;
-			left: 450px;
-			font: bold 45px/1 "Grape Nuts", cursive;
+			font: bold 12px/1 "arial";
+			color: orange;
+			top: 145px;
+			left: 515px;
+		}
+		>h1 {
+			position: absolute;
+			top: 158px;
+			left: 440px;
+			font: bold 70px/1 "Grape Nuts", cursive;
 			color: #fff;
-			z-index: 4;
+			z-index: 7;
 			&::after {
+				position: absolute;
 				content: "";
 				display: block;
 				width: 450px;
@@ -31,27 +41,84 @@
 				background: burlywood;
 				margin-top: 10px;
 				z-index: 15;
+				top: 98px;
+				left: 238px;
 			}
 		}
+
 		a {
-			position: absolute;
-			top: 400px;
-			left: 530px;
+			display: block;
+			text-align: center;
+			height: 40px;
+			width: 250px;
+			top: 385px;
+			left: 490px;
+			padding-top: 8px;
 			font: bold 20px/1 "arial";
 			color: #fff;
-			border-radius: 5px;
-			border: 1px solid burlywood;
+			transform: skewX(0deg);
+			position: absolute;
 			background-color: burlywood;
-			z-index: 4;
+			z-index: 7;
+			&::after {
+				transform: skewX(315deg);
+			}
+		}
 
-			.bbox {
-				position: absolute;
-				width: 1180px;
-				height: 200px;
-				background: #000;
-				z-index: 3;
-				top: 644px;
-				left: 157px;
+		.scrd {
+			font: bold 12px/1 "arial";
+			color: orange;
+			position: absolute;
+			top: 650px;
+			left: 500px;
+			transform: rotate(270deg);
+			z-index: 4;
+		}
+		.bbox {
+			position: absolute;
+			width: 1180px;
+			height: 200px;
+			background: #111;
+			z-index: 3;
+			top: 643px;
+			left: 252px;
+		}
+		
+		.pic{
+			position: absolute;
+			top: 100px;
+			right: 100px;
+			z-index: 5;
+		}
+		.lorem{
+			width: 200px;
+			height: 200px;
+			background: #000;
+			position: absolute;
+			top:643px;
+			right: -115px;
+			z-index: 8;
+			
+			padding: 10px;
+			h1{
+				font: 10px/1 'arial';
+				color: orange;
+				margin: 10px 20px;
+
+			}
+			>p{
+				font: 15px/1.3 'arial';
+				color: #fff;
+				margin: 10px 27px;
+
+			}
+			span{
+				font: 10px/1.2 'arial';
+				color: #999;
+				margin: 3px 15px;
+				display: block;
+				padding:5px;
+
 			}
 		}
 	}
