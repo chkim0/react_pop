@@ -18,7 +18,7 @@ export default function Youtube() {
     useEffect(() => {
         // 유튜브 관련정보 가져오기
         const key = 'AIzaSyAKqZ1Dx9awi1lCS84qziASeQYZJqLxLSM';
-        const playlist = "PLtt429gshWMp4G-VhNTFhBzBTd7GOEz-G";
+        const playlist = "PLBVGGbELl6ghM0xiHh-ZGunQXU7jThujc";
         const num = 6;
         const url = `https://www.googleapis.com/youtube/v3/playlistItems?part=snippet&key=${key}&playlistId=${playlist}&maxResults=${num}`;
 

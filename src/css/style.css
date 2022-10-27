@@ -217,6 +217,11 @@ header.main .inner .fa-bars {
   height: 100%;
   object-fit: cover;
 }
+.pop .con img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
 .pop .close {
   font: bold 14px/1 "arial";
   color: orange;
@@ -229,7 +234,7 @@ header.main .inner .fa-bars {
 #news {
   width: 100%;
   height: 100vh;
-  background: #c6ffc6;
+  background: #333;
   position: relative;
   padding: 10vh;
   display: flex;
@@ -621,6 +626,121 @@ header.main .inner .fa-bars {
   }
   .Department > .inner article .inner .pic {
     height: 200px;
+  }
+}
+.Gallery .loading {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 0;
+}
+.Gallery .controls {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.Gallery .controls nav {
+  padding: 10px;
+  display: flex;
+  gap: 20px;
+}
+.Gallery .controls nav button {
+  border: none;
+  width: 130px;
+  height: 30px;
+  background: #555;
+  font: 12px/30px "arial";
+  color: #ddd;
+  text-align: center;
+  cursor: pointer;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+}
+.Gallery .controls .searchBox {
+  padding-right: 15px;
+}
+.Gallery .controls .searchBox input {
+  width: 200px;
+  height: 26px;
+  background: #fff;
+  border: 1px solid #bbb;
+  padding: 3px 8px;
+}
+.Gallery .controls .searchBox button {
+  width: 80px;
+  height: 26px;
+  border: none;
+  background: #555;
+  font: 12px/26px "arial";
+  color: #fff;
+  cursor: pointer;
+  margin-left: 5px;
+}
+.Gallery .frame {
+  transform: translateY(200px);
+  opacity: 0;
+  transition: all 0.5s;
+}
+.Gallery .frame.on {
+  transform: translateY(0px);
+  opacity: 1;
+}
+.Gallery .frame::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+.Gallery .frame article {
+  width: 25%;
+  padding: 10px;
+  float: left;
+}
+.Gallery .frame article .inner {
+  width: 100%;
+  padding: 10px;
+  background: #fff;
+  box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.03);
+}
+.Gallery .frame article .inner .pic {
+  width: 100%;
+  margin-bottom: 5px;
+}
+.Gallery .frame article .inner .pic img {
+  width: 100%;
+}
+.Gallery .frame article .inner h2 {
+  font: normal 14px/1.2 "arial";
+  color: #777;
+  margin-bottom: 30px;
+}
+.Gallery .frame article .inner .profile {
+  display: flex;
+  align-items: center;
+}
+.Gallery .frame article .inner .profile img {
+  width: 40px;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+.Gallery .frame article .inner .profile span {
+  color: orange;
+  cursor: pointer;
+  transition: 0.5s;
+  font-size: 20px;
+  word-break: break-all;
+}
+.Gallery .frame article .inner .profile span:hover {
+  color: aqua;
+}
+
+@media screen and (max-width: 1179px) {
+  section .frame article {
+    width: 33.3333%;
+  }
+}
+@media screen and (max-width: 539px) {
+  section .frame article {
+    width: 100%;
   }
 }
 .Location figure {

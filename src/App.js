@@ -19,8 +19,19 @@ import Youtube from './components/sub/Youtube';
 import './scss/style.scss';
 
 function App() {
+	const getYoutube = async () => {
+		const key = 'AIzaSyAKqZ1Dx9awi1lCS84qziASeQYZJqLxLSM';
+		const playlist = "PLBVGGbELl6ghM0xiHh-ZGunQXU7jThujc";
+		const num = 6;
+		const url = `https://www.googleapis.com/youtube/v3/playlistItems?part=snippet&key=${key}&playlistId=${playlist}&maxResults=${num}`;
+
+	}
+	
+	
 	return (
 		<>
+
+		
 			{/* Switch는 같은 경로의 라우터 연결시 구체적인 라우터 하나만 적용한다 */}
 			<Switch>
 				<Route exact path='/' component={Main} />
