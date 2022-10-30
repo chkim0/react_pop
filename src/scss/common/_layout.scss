@@ -5,6 +5,13 @@
 		background: #bbb;
 		opacity: 0;
 		transition: 1s;
+		overflow: hidden;
+
+		img {
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+		}
 	}
 	> .inner {
 		width: 1180px;
@@ -16,15 +23,15 @@
 		//transition: opacity 0.5s, transform 1s;
 		transition: 0.5s;
 		h1 {
-			font: normal 60px/1 "work sans";
+			font: normal 60px/1 "Orbitron";
 			color: #fff;
-			margin-bottom: 50px;
+			margin-bottom: 70px;
 			&::after {
 				content: "";
 				display: block;
 				width: 60px;
-				height: 2px;
-				background: #fff;
+				height: 1px;
+				background: #555;
 				margin-top: 20px;
 			}
 		}

@@ -1,7 +1,79 @@
-#vids{
-    width: 100%;
-    height: 100vh;
-    background: #eeffc6;
-    position: relative;
-    padding: 10vw;
+#vids {
+	width: 100%;
+	height: 100vh;
+	background: linear-gradient(45deg, #000, #222);
+	position: relative;
+
+	.swiper {
+		height: 100%;
+		padding: 20vh 0px;
+
+		.swiper-slide {
+			width: 600px;
+
+			.inner {
+				width: 100%;
+				height: 100%;
+				padding: 30px;
+				background: #fff;
+				opacity: 0.5;
+				transform: scale(0.8);
+				transition: opacity 0.5s, transform 0.5s;
+
+				.pic {
+					width: 100%;
+					height: 300px;
+					overflow: hidden;
+					margin-bottom: 20px;
+					cursor: pointer;
+
+					img {
+						width: 100%;
+						height: 100%;
+						object-fit: cover;
+					}
+				}
+
+				h2 {
+					font: normal 40px/1 'work sans';
+					color: #333;
+				}
+			}
+			&.swiper-slide-active {
+				.inner {
+					opacity: 1;
+					transform: scale(1);
+				}
+			}
+		}
+
+		.swiper-pagination {
+			bottom: 40px;
+			filter: grayscale(1) brightness(4);
+			z-index: 5;
+
+			.swiper-pagination-bullet {
+				border-radius: 4px;
+				transition: 0.5s;
+				background-color: #fff;
+			}
+
+			.swiper-pagination-bullet-active {
+				width: 80px;
+			}
+		}
+
+		.swiper-button-prev,
+		.swiper-button-next {
+			top: auto;
+			bottom: 30px;
+			transform: scale(0.5);
+			filter: grayscale(1) brightness(4);
+			z-index: 6;
+		}
+		.swiper-button-prev {
+			left: auto;
+			right: 60px;
+		}
+	}
 }

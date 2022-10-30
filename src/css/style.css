@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Bangers&family=Bowlby+One+SC&family=Grape+Nuts&family=Herr+Von+Muellerhoff&family=Notable&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Orbitron:wght@900&display=swap");
 * {
   margin: 0px;
   padding: 0px;
@@ -64,6 +65,12 @@ footer .inner p {
   background: #bbb;
   opacity: 0;
   transition: 1s;
+  overflow: hidden;
+}
+.content figure img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 .content > .inner {
   width: 1180px;
@@ -75,16 +82,16 @@ footer .inner p {
   transition: 0.5s;
 }
 .content > .inner h1 {
-  font: normal 60px/1 "work sans";
+  font: normal 60px/1 "Orbitron";
   color: #fff;
-  margin-bottom: 50px;
+  margin-bottom: 70px;
 }
 .content > .inner h1::after {
   content: "";
   display: block;
   width: 60px;
-  height: 2px;
-  background: #fff;
+  height: 1px;
+  background: #555;
   margin-top: 20px;
 }
 .content.on figure {
@@ -123,7 +130,7 @@ header .inner h1 {
   display: inline-block;
 }
 header .inner h1 a {
-  font: normal 25px/1 "arial";
+  font: normal 25px/1 "Orbitron";
   color: #fff;
   text-align: center;
 }
@@ -138,7 +145,7 @@ header .inner #gnb li {
 header .inner #gnb li a {
   display: inline-block;
   padding: 20px 15px;
-  font: bold 15px/1 "arial";
+  font: bold 15px/1 "Orbitron";
   color: #000;
 }
 header .inner .fa-bars {
@@ -234,38 +241,62 @@ header.main .inner .fa-bars {
 #news {
   width: 100%;
   height: 100vh;
-  background: #333;
-  position: relative;
+  background: #222;
   padding: 10vh;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
 }
-#news h1 {
+#news .inner {
+  width: 1180px;
+  height: 100%;
+  background: #000;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+#news .inner .newsheader {
+  display: block;
+  margin: 0 auto;
+  position: absolute;
+  top: -45px;
+  left: 255px;
+}
+#news .inner .newsheader > span {
+  font: 10px/1 "arial";
+  color: orange;
+  left: 0px;
+}
+#news .inner .newsheader h1 {
   display: block;
   width: 100%;
   text-align: center;
   margin-bottom: 20px;
+  z-index: 3;
+  color: #fff;
 }
-#news article {
-  width: 15%;
+#news .inner article {
+  width: 25%;
   min-height: 180px;
-  border: 1px solid #999;
+  border: 1px solid #fff;
+  background: #000;
   padding: 20px;
   margin: 10px;
   transform: translateY(100px) rotateY(180deg);
   opacity: 0;
   transition-duration: 0.5s;
 }
-#news article h2 {
+#news .inner article h3 {
   font: bold 18px/1 "arial";
-  color: #444;
+  color: #fff;
   margin-bottom: 15px;
 }
-#news article p {
-  font: 14px/1.2 "arial";
-  color: #777;
+#news .inner article p {
+  font: 10px/1.2 "arial";
+  color: #fff;
 }
 #news.on article {
   transform: translateY(0) rotateY(0deg);
@@ -297,13 +328,16 @@ header.main .inner .fa-bars {
 }
 #visual .inner {
   width: 1180px;
+  height: 100%;
   position: relative;
   padding: 10px auto;
+  margin: 0 auto;
+  right: 0;
 }
 #visual .inner video {
   position: absolute;
-  top: 90px;
-  left: 666px;
+  top: 91px;
+  left: 413px;
   width: 65%;
   height: 70vh;
   opacity: 1;
@@ -315,13 +349,13 @@ header.main .inner .fa-bars {
   position: absolute;
   font: bold 12px/1 "arial";
   color: orange;
-  top: 145px;
-  left: 515px;
+  top: 160px;
+  left: 250px;
 }
 #visual .inner > h1 {
   position: absolute;
-  top: 158px;
-  left: 440px;
+  top: 190px;
+  left: 235px;
   font: bold 70px/1 "Grape Nuts", cursive;
   color: #fff;
   z-index: 7;
@@ -344,7 +378,7 @@ header.main .inner .fa-bars {
   height: 40px;
   width: 250px;
   top: 385px;
-  left: 490px;
+  left: 245px;
   padding-top: 8px;
   font: bold 20px/1 "arial";
   color: #fff;
@@ -360,8 +394,8 @@ header.main .inner .fa-bars {
   font: bold 12px/1 "arial";
   color: orange;
   position: absolute;
-  top: 650px;
-  left: 500px;
+  top: 600px;
+  left: 240px;
   transform: rotate(270deg);
   z-index: 4;
 }
@@ -371,22 +405,28 @@ header.main .inner .fa-bars {
   height: 200px;
   background: #111;
   z-index: 3;
-  top: 643px;
-  left: 252px;
+  top: 626px;
+  left: 0px;
 }
 #visual .inner .pic {
+  width: 250px;
   position: absolute;
-  top: 100px;
-  right: 100px;
-  z-index: 5;
+  height: 350px;
+  top: 477px;
+  left: 780px;
+  z-index: 6;
+}
+#visual .inner .pic img {
+  width: 100%;
+  height: 100%;
 }
 #visual .inner .lorem {
   width: 200px;
   height: 200px;
   background: #000;
   position: absolute;
-  top: 643px;
-  right: -115px;
+  top: 627px;
+  right: -1px;
   z-index: 8;
   padding: 10px;
 }
@@ -411,33 +451,103 @@ header.main .inner .fa-bars {
 #vids {
   width: 100%;
   height: 100vh;
-  background: #eeffc6;
+  background: linear-gradient(45deg, #000, #222);
   position: relative;
-  padding: 10vw;
+}
+#vids .swiper {
+  height: 100%;
+  padding: 20vh 0px;
+}
+#vids .swiper .swiper-slide {
+  width: 600px;
+}
+#vids .swiper .swiper-slide .inner {
+  width: 100%;
+  height: 100%;
+  padding: 30px;
+  background: #fff;
+  opacity: 0.5;
+  transform: scale(0.8);
+  transition: opacity 0.5s, transform 0.5s;
+}
+#vids .swiper .swiper-slide .inner .pic {
+  width: 100%;
+  height: 300px;
+  overflow: hidden;
+  margin-bottom: 20px;
+  cursor: pointer;
+}
+#vids .swiper .swiper-slide .inner .pic img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+#vids .swiper .swiper-slide .inner h2 {
+  font: normal 40px/1 "work sans";
+  color: #333;
+}
+#vids .swiper .swiper-slide.swiper-slide-active .inner {
+  opacity: 1;
+  transform: scale(1);
+}
+#vids .swiper .swiper-pagination {
+  bottom: 40px;
+  filter: grayscale(1) brightness(4);
+  z-index: 5;
+}
+#vids .swiper .swiper-pagination .swiper-pagination-bullet {
+  border-radius: 4px;
+  transition: 0.5s;
+  background-color: #fff;
+}
+#vids .swiper .swiper-pagination .swiper-pagination-bullet-active {
+  width: 80px;
+}
+#vids .swiper .swiper-button-prev,
+#vids .swiper .swiper-button-next {
+  top: auto;
+  bottom: 30px;
+  transform: scale(0.5);
+  filter: grayscale(1) brightness(4);
+  z-index: 6;
+}
+#vids .swiper .swiper-button-prev {
+  left: auto;
+  right: 60px;
 }
 
 #pics {
   width: 100%;
   height: 100vh;
-  background: #c6fcff;
+  background: #222;
   position: relative;
   padding: 10vw;
   overflow: hidden;
+  display: flex;
+  align-content: center;
+  flex-wrap: wrap;
 }
 #pics p {
-  font: bold 200px/1 "arial";
+  font: bold 100px/1 "arial";
   color: rgba(0, 0, 0, 0.3);
   position: absolute;
   top: 100px;
   left: 100px;
 }
 #pics h3 {
-  font: bold 160px/1 "arial";
+  font: bold 60px/1 "arial";
   color: #fff;
   position: absolute;
   top: 160px;
   left: 100px;
   text-shadow: 20px 20px 50px rgba(0, 0, 0, 0.4);
+}
+#pics ul {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 50px;
+  justify-content: center;
 }
 
 .scroll_navi {
@@ -446,19 +556,21 @@ header.main .inner .fa-bars {
   transform: translateY(-50%);
   right: 50px;
   z-index: 3;
+  background: #000;
+  border: 2px solid #fff;
 }
 .scroll_navi li {
-  width: 10px;
+  width: 15px;
   height: 10px;
-  border: 1px solid #111;
+  border: 2px solid #fff;
   background: #fff;
-  margin: 20px;
+  margin: 10px;
   cursor: pointer;
   transition: 0.5s;
 }
 .scroll_navi li.on {
   height: 100px;
-  background: #111;
+  background: #fff;
   border: #fff;
 }
 
@@ -467,6 +579,7 @@ header.main .inner .fa-bars {
   border: 1px solid #bbb;
   padding: 50px;
   margin-bottom: 50px;
+  background: #333;
 }
 .Community > .inner input[type=text], .Community > .inner textarea {
   width: 50%;
@@ -577,7 +690,7 @@ header.main .inner .fa-bars {
   transition: 0.5s;
   transform: translateY(100px);
 }
-.Department > .inner article .pic:hover .info {
+.Department > .inner article .pic:hover .pic {
   opacity: 1;
   transition: 0.5s;
 }
@@ -591,7 +704,7 @@ header.main .inner .fa-bars {
   height: 100%;
   object-fit: cover;
 }
-.Department > .inner article .info {
+.Department > .inner article .inner {
   width: 373px;
   height: 130px;
   background-color: #ddd;
@@ -599,14 +712,14 @@ header.main .inner .fa-bars {
   padding: 10px;
   margin-right: 10px;
 }
-.Department > .inner article .info h3 {
+.Department > .inner article .inner h3 {
   font: bold 25px/1 "arial";
-  color: #111;
+  color: #fff;
   text-align: center;
 }
-.Department > .inner article .info p {
+.Department > .inner article .inner p {
   font: bold 15px/1 "arial";
-  color: #111;
+  color: #fff;
   text-align: center;
 }
 
@@ -615,7 +728,7 @@ header.main .inner .fa-bars {
     width: 50%;
     margin-bottom: 40px;
   }
-  .Department > .inner article .inner .pic {
+  .Department > .inner article .info .pic {
     height: 260px;
   }
 }
@@ -624,7 +737,7 @@ header.main .inner .fa-bars {
     width: 100%;
     margin-bottom: 30px;
   }
-  .Department > .inner article .inner .pic {
+  .Department > .inner article .info .pic {
     height: 200px;
   }
 }

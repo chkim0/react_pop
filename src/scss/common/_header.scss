@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@900&display=swap');
+
 header {
 	width: 100%;
 	background: #000;
@@ -15,7 +17,7 @@ header {
 			display: inline-block;
 
 			a {
-				font: normal 25px/1 "arial";
+				font: normal 25px/1 "Orbitron";
 				color: #fff;
 				text-align: center;
 			}
@@ -29,7 +31,7 @@ header {
 				a {
 					display: inline-block;
 					padding: 20px 15px;
-					font: bold 15px/1 "arial";
+					font: bold 15px/1 "Orbitron";
 					color: #000;
 				}
 			}

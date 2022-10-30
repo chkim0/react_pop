@@ -1,5 +1,5 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faBars } from '@fortawesome/free-solid-svg-icons'
+import { faBars, faMagnifyingGlassPlus, faMapPin } from '@fortawesome/free-solid-svg-icons'
 
 
 import Anime from "../../asset/Anime"
@@ -30,7 +30,7 @@ export default function Visual() {
         <span className='scrd'>S C R O L L   D O W N </span>
         <div className="bbox"></div>
         <div className='box' ref={box}></div>
-        <pic className='pic' src={process.env.PUBLIC_URL+ '/img/mainp.jpg'}></pic>
+        <pic className='pic'><img src={process.env.PUBLIC_URL+ '/img/mainp.jpg'} /></pic>
         <div className='lorem'>
           <h1>L A S T V I D E O</h1>
           <p>Wild Iceland in the winter in 10 days</p>

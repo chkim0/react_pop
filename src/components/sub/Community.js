@@ -142,7 +142,7 @@ export default function Community() {
                 <textarea cols="30" rows="5" placeholder="본문을 입력하세요" ref={textarea}></textarea>
                 <br />
                 <div className="btnSet">
-                    <button onClick={resetForm}>CANCLE</button>
+                    <button onClick={resetForm}>CANCEL</button>
                     <button onClick={createPost}>WRITE</button>
                 </div>
 
@@ -165,7 +165,7 @@ export default function Community() {
                                             </textarea>
                                         </div>
                                         <div className="btnSet">
-                                            <button onClick={() => disableUpdate(idx)}>CANCLE</button>
+                                            <button onClick={() => disableUpdate(idx)}>CANCEL</button>
                                             <button onClick={() => updatePost(idx)}>UPDATE</button>
                                         </div>
                                     </>
